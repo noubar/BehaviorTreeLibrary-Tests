@@ -40,7 +40,7 @@ Suite Teardown  Stop Auto Background Clicker
 
 # This is 100% abstracted to be a one scentence which is easy to understand
 # GDSC = G DATA Security Center (Applications Main GUI window)
-# To know the steps of the test case you need to follow the keywords.
+# To know the steps of the test case you need to follow the keywords deeper.
 
 Start Client UI From Tray
     [Documentation]             This test case opens the client UI.
@@ -50,8 +50,8 @@ Start Client UI From Tray
     [Teardown]    Close GDSC
 
 # BT = Behavior Tree
-# In following example illustrates how it is even with BT not possible to include
-# every keyword directly in the test case wihtout abstraction and preserve the readability.
+# The following example illustrates, how it is even with BT not possible to include
+# every base keyword directly into the test case wihtout abstraction by still preserving the readability.
 
 Start Client UI From Tray BT All Steps In Here
     [Documentation]             This test case opens the client UI.
@@ -93,7 +93,7 @@ Start Client UI From Tray BT All Steps In Here
     ...  -  -  -  -  Fail    msg="GDSC Window could not be opened via Tray in Notification Overflow."
 
 # Another possible way to rewrite this test case with BT
-# In this test case also every thing is in BT but also abstracted
+# is this test case, where the whole test case is one BT but still uses some abstraction
 
 Start Client UI From Tray BT 1
     [Documentation]             This test case opens the client UI.
@@ -109,10 +109,24 @@ Start Client UI From Tray BT 1
     ...  -  -  Open GDSC By Notification Overflow
     [Teardown]    Close GDSC
 
-# As you see from above
-# this is why we do not suggest to try to make every keyword part of BT
-# But only use the BT in places or under keywords where it is needed Like the follow.
-# Hybrid solution 
+# As you see the test case above which is the equivalent to the original robot test case
+#    [Tags]   B2C:FastCheckUp
+#    Is Tray Icon NotGrouped
+#    Close If Notification Tray Popups
+#    IF  ${NotGrouped}==True
+#        Open GDSC By System Tray
+#    ELSE
+#        Open GDSC By Notification Overflow
+#    END
+#   [Teardown]  Close GDSC
+
+# The kw "Is Tray Icon Not Grouped" is rewritten to be "Tray Icon Should Not Be Grouped"
+# but now the test case is one line longer than it's original. One keyword is used twice.
+# This is why we do not suggest to make every keyword part of BT in test case
+# if you are translating an existing test case. 
+# But we rather suggest to only to use the BT in places or under keywords,
+# where it is needed like the follow.
+# Hybrid solution: follow the kw "Open GDSC By Tray BT" deeper and see the difference.
 
 Start Client UI From Tray BT Best Approach   # :)
     [Documentation]             This test case opens the client UI.
