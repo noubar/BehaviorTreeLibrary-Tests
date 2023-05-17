@@ -30,12 +30,6 @@ Documentation   This suite covers MS FastCheckUp smoketests
 Resource   ../../B2C/Keyword/Common.robot
 Library    BehaviorTreeLibrary   # newly added for evaluation
 
-Suite Setup     Run Keywords  Write StartTime
-...             AND           Write Suite Metadata
-...             AND           Start Auto Background Clicker
-...             AND           Create Directory   ${DUMPS_FOLDER}
-Suite Teardown  Stop Auto Background Clicker
-
 *** Test Cases ***
 
 # This is 100% abstracted to be a one scentence which is easy to understand
@@ -56,7 +50,7 @@ Start Client UI From Tray
 Start Client UI From Tray BT All Steps In Here
     [Documentation]             This test case opens the client UI.
     ...
-    [Tags]    B2C:FastCheckUp
+    [Tags]    B2C:FastCheckUp_DemoOnly
     One Should Pass
     ...  -  Variable Should Exist   \${NotGrouped}
     ...  -  All Should Pass
@@ -98,7 +92,7 @@ Start Client UI From Tray BT All Steps In Here
 Start Client UI From Tray BT 1
     [Documentation]             This test case opens the client UI.
     ...
-    [Tags]    B2C:FastCheckUp
+    [Tags]    B2C:FastCheckUp_BT1
     One Should Pass
     ...  -  All Should Pass
     ...  -  -  Tray Icon Should Not Be Grouped  # this keyword is implemented new
@@ -131,6 +125,6 @@ Start Client UI From Tray BT 1
 Start Client UI From Tray BT Best Approach   # :)
     [Documentation]             This test case opens the client UI.
     ...
-    [Tags]    B2C:FastCheckUp
+    [Tags]    B2C:FastCheckUp_BT
     Open GDSC By Tray BT
     [Teardown]    Close GDSC
