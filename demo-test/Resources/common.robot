@@ -9,6 +9,7 @@ Start Application
     [Arguments]   ${application}=${APP}
     ${PID}  Start Process  ${application}
     Set Test Variable    ${PID}
+    Sleep  2s
 
 Start Blocker
     [Arguments]

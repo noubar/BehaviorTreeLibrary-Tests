@@ -4,7 +4,7 @@ Library  Resources/complexuihelper.py
 Resource  Resources/common.robot
 
 *** Variables ***
-${APP}  apps\\ComplexPuzzle
+${APP}  ${CURDIR}\\apps\\ComplexPuzzle
 
 *** Test Cases ***
 
@@ -21,11 +21,11 @@ Complex Puzzle Test BT Style All Branches Executed
     ...  -  -  -  Expect Four In Positive Diagonal
     ...  -  -  -  Expect Four In Negative Diagonal
     ...  -  -  -  Check Table As Valid
-    ...  -  -  Check Login As Invalid
+    ...  -  -  Check Table As Invalid
     ...  -  One Should Pass
     ...  -  -  All Should Pass
     ...  -  -  -  Expect Username To Be Valid
-    ...  -  -  -  One Should Pass 
+    ...  -  -  -  One Should Pass
     ...  -  -  -  -   All Should Pass
     ...  -  -  -  -  -  Expect Password To Be Valid
     ...  -  -  -  -  -  Check Login As Valid
@@ -49,11 +49,11 @@ Complex Puzzle Test BT Style All Lines Executed
     ...  -  -  -  Expect Four In Positive Diagonal
     ...  -  -  -  Expect Four In Negative Diagonal
     ...  -  -  -  Check Table As Valid
-    ...  -  -  Check Login As Invalid
+    ...  -  -  Check Table As Invalid
     ...  -  One Should Pass
     ...  -  -  All Should Pass
     ...  -  -  -  Expect Username To Be Valid
-    ...  -  -  -  One Should Pass 
+    ...  -  -  -  One Should Pass
     ...  -  -  -  -   All Should Pass
     ...  -  -  -  -  -  Expect Password To Be Valid
     ...  -  -  -  -  -  Check Login As Valid
@@ -77,11 +77,11 @@ Complex Puzzle Test BT Style All Branches Passed
     ...  -  -  -  Expect Four In Positive Diagonal
     ...  -  -  -  Expect Four In Negative Diagonal
     ...  -  -  -  Check Table As Valid
-    ...  -  -  Check Login As Invalid
+    ...  -  -  Check Table As Invalid
     ...  -  One Should Pass
     ...  -  -  All Should Pass
     ...  -  -  -  Expect Username To Be Valid
-    ...  -  -  -  One Should Pass 
+    ...  -  -  -  One Should Pass
     ...  -  -  -  -   All Should Pass
     ...  -  -  -  -  -  Expect Password To Be Valid
     ...  -  -  -  -  -  Check Login As Valid
@@ -105,11 +105,11 @@ Complex Puzzle Test BT Style All Lines Passed
     ...  -  -  -  Expect Four In Positive Diagonal
     ...  -  -  -  Expect Four In Negative Diagonal
     ...  -  -  -  Check Table As Valid
-    ...  -  -  Check Login As Invalid
+    ...  -  -  Check Table As Invalid
     ...  -  One Should Pass
     ...  -  -  All Should Pass
     ...  -  -  -  Expect Username To Be Valid
-    ...  -  -  -  One Should Pass 
+    ...  -  -  -  One Should Pass
     ...  -  -  -  -   All Should Pass
     ...  -  -  -  -  -  Expect Password To Be Valid
     ...  -  -  -  -  -  Check Login As Valid
