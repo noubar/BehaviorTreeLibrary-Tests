@@ -13,11 +13,10 @@ Can be found [here](https://github.com/noubar/WPF_Test_Puzzle/blob/main/README.m
 ## Test Case BT Representation
 
 **Simple Test**:
-<div style="display: flex;">
-  <img src="../ReadmeImages/SimpleTestDiag.png" alt="Image 1" style="width: 50%; margin-right: 10px;">
-  OR
-  <img src="../ReadmeImages/SimpleTestTree.png" alt="Image 2" style="width: 50%;">
-</div>
+| Single Flow Representation | Multiflow Representation |
+|---------------------------------|---------------------------------|
+| ![Image 1](../ReadmeImages/SimpleTestDiag.png) |  ![Image 2](../ReadmeImages/SimpleTestTree.png) |
+| | |
 
 
 **Complex Test**:
